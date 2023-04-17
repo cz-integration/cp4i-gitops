@@ -1,8 +1,8 @@
 resources:
-  - namespaces/namespaces.yaml
-  - operators/operators.yaml
+  #- namespaces/namespaces.yaml
+  #- operators/operators.yaml
   - operands/operands.yaml
-  - myqm/myqm.yaml
-  - qm-alpha/qm-alpha.yaml
+  #- myqm/myqm.yaml
+  #- qm-alpha/qm-alpha.yaml
   #- service-requests/service-requests.yaml
   

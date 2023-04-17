@@ -10,7 +10,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cp4i
   source:
-    repoURL: https://github.com/Martist/cp4i-gitops.git
+    repoURL: https://github.com/cz-integration/cp4i-gitops.git
     path: operators/resources
     targetRevision: main
   syncPolicy:

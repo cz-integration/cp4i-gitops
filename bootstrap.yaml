@@ -25,7 +25,7 @@ spec:
   project: cp4i
   source:
     path: ./
-    repoURL: https://github.com/Martist/cp4i-gitops.git
+    repoURL: https://github.com/cz-integration/cp4i-gitops.git
     targetRevision: main
   syncPolicy:
     automated:
