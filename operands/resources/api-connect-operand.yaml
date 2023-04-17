@@ -17,7 +17,7 @@ spec:
     testAndMonitor:
       enabled: true
       autoTestEnabled: true
-      aiEnabled: true
+      aiEnabled: false
   endpointTypes:
     - Events
     - APIs
