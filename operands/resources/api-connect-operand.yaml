@@ -13,6 +13,11 @@ spec:
     license: L-GVEN-GFUPVE
     metric: VIRTUAL_PROCESSOR_CORE
     use: production
+  management:
+    testAndMonitor:
+      enabled: true
+      autoTestEnabled: true
+      aiEnabled: true
   endpointTypes:
     - Events
     - APIs
@@ -24,3 +29,4 @@ spec:
   version: 10.0.5.2-ifix1-124
   storageClassName: ocs-storagecluster-ceph-rbd
   allowUpgrade: true
+
