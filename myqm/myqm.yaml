@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myqm
+spec:
+  destination:
+    namespace: cp4i
+    server: https://kubernetes.default.svc
+  project: cp4i
+  source:
+    repoURL: https://github.com/Martist/cp4i-gitops.git
+    path: myqm/resources
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

@@ -1,0 +1,9 @@
+nameReference:
+  - kind: ConfigMap
+    fieldSpecs:
+      - path: spec/queueManager/mqsc/configMap/name
+        kind: QueueManager
+  - kind: ConfigMap
+    fieldSpecs:
+      - path: spec/queueManager/ini/configMap/name
+        kind: QueueManager

@@ -1,0 +1,40 @@
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: myqm
+  annotations:
+    com.ibm.mq/write-defaults-spec: 'false'
+  namespace: cp4i
+spec:
+  license:
+    accept: true
+    license: L-RJON-CJR2RX
+    use: NonProduction
+  web:
+    enabled: true
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQSNOAUT
+              value: 'yes'
+          name: qmgr
+  queueManager:
+    mqsc:
+      - configMap:
+          name: myqm-config
+          items:
+            - myqm.mqsc
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    availability:
+      type: NativeHA
+    storage:
+      queueManager:
+        type: persistent-claim
+        class: ibmc-block-gold
+      defaultClass: ibmc-block-gold
+  version: 9.3.2.0-r2

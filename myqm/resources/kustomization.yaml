@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+configurations:
+  - kustomization-config-mq.yaml
+# Set the namespace for all resources
+namespace: cp4i
+# Generate the ConfigMap resources from the raw MQSC file
+configMapGenerator:
+  - name: myqm-config
+    files:
+      - myqm.mqsc
+# Include these resources
+resources:
+  - myqm.QueueManager.yaml
